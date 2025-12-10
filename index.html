@@ -9,6 +9,7 @@
     content="Homepage of Rituparna Datta, PhD candidate in Computer Science at the University of Virginia."
   />
   <link rel="icon" href="Ritu_linkedIn.jpg" />
+
   <style>
     :root {
       --bg: #f9fafb;
@@ -18,7 +19,6 @@
       --text: #111827;
       --muted: #4b5563;
       --border: #e5e7eb;
-      --code-bg: #111827;
     }
 
     * {
@@ -27,26 +27,17 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      background: radial-gradient(circle at top, #eef2ff 0, #f9fafb 45%, #f9fafb 100%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #eef2ff 0, #f9fafb 45%);
       color: var(--text);
       line-height: 1.6;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     .wrapper {
       max-width: 960px;
@@ -54,7 +45,7 @@
       padding: 1.5rem 1.25rem 3rem;
     }
 
-    /* Top bar / nav */
+    /* Header */
     header {
       position: sticky;
       top: 0;
@@ -69,9 +60,8 @@
       margin: 0 auto;
       padding: 0.6rem 1.25rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      align-items: center;
     }
 
     .brand {
@@ -110,52 +100,36 @@
     /* Hero */
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      grid-template-columns: 3fr 2fr;
       gap: 2rem;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding: 2rem 0;
       align-items: center;
     }
 
-    .hero-main h1 {
-      font-size: clamp(2.1rem, 3vw, 2.6rem);
-      letter-spacing: -0.03em;
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-main h2 {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--muted);
-      margin-bottom: 0.8rem;
-    }
-
-    .hero-main p {
-      font-size: 0.96rem;
-      color: var(--muted);
-      margin-bottom: 0.9rem;
+    .hero-photo img {
+      width: 190px;
+      height: 190px;
+      border-radius: 999px;
+      border: 2px solid var(--border);
+      object-fit: cover;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.22);
     }
 
     .hero-tagline {
       background: var(--bg-alt);
+      padding: 0.7rem 0.9rem;
       border-radius: 0.9rem;
       border: 1px solid var(--border);
-      padding: 0.7rem 0.9rem;
+      margin-bottom: 1rem;
       font-size: 0.85rem;
       color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .hero-tagline strong {
-      color: var(--text);
-      font-weight: 600;
     }
 
     .hero-links {
       display: flex;
-      flex-wrap: wrap;
       gap: 0.5rem;
-      margin-top: 0.4rem;
+      flex-wrap: wrap;
+      margin-top: 0.6rem;
     }
 
     .chip {
@@ -163,64 +137,44 @@
       padding: 0.35rem 0.7rem;
       border-radius: 999px;
       border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.9);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      color: var(--muted);
+      background: #fff;
     }
 
-    .chip strong {
-      color: var(--text);
-      font-weight: 600;
+    ul.inline-list {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+      list-style: none;
+      margin-top: 0.75rem;
     }
 
-    .chip a {
-      font-weight: 500;
-    }
-
-    .hero-photo {
-      justify-self: center;
-    }
-
-    .hero-photo img {
-      width: 190px;
-      height: 190px;
+    ul.inline-list li {
+      background: var(--accent-soft);
       border-radius: 999px;
-      object-fit: cover;
-      border: 2px solid var(--border);
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.22);
+      padding: 0.15rem 0.55rem;
+      font-size: 0.8rem;
     }
 
     /* Sections */
-    section {
-      margin-top: 2.5rem;
-      padding-top: 0.5rem;
-    }
+    section { margin-top: 2.5rem; }
 
     section h3 {
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
     }
 
     .section-subtitle {
       font-size: 0.86rem;
       color: var(--muted);
-      margin-bottom: 0.9rem;
+      margin-bottom: 1rem;
     }
 
     .card {
       background: var(--bg-alt);
-      border-radius: 0.9rem;
       border: 1px solid var(--border);
+      border-radius: 0.9rem;
       padding: 1rem 1.1rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .card h4 {
-      font-size: 0.98rem;
-      margin-bottom: 0.25rem;
+      margin-bottom: 1rem;
     }
 
     .card .meta {
@@ -229,395 +183,209 @@
       margin-bottom: 0.35rem;
     }
 
-    .card p {
-      font-size: 0.9rem;
+    .paper-figure {
+      margin-top: 0.75rem;
+    }
+
+    .paper-figure img {
+      width: 100%;
+      border-radius: 0.6rem;
+      border: 1px solid var(--border);
+    }
+
+    .paper-figure figcaption {
+      margin-top: 0.3rem;
+      font-size: 0.78rem;
       color: var(--muted);
     }
 
-    ul.inline-list {
-      list-style: none;
-      padding-left: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      font-size: 0.84rem;
-      margin: 0.35rem 0 0;
-    }
-
-    ul.inline-list li {
-      background: var(--accent-soft);
-      border-radius: 999px;
-      padding: 0.15rem 0.55rem;
-    }
-
-    /* Two-column layout */
     .two-col {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      grid-template-columns: 1.4fr 1.1fr;
       gap: 1.5rem;
-      align-items: flex-start;
     }
 
-    /* Contact */
-    .contact-list {
-      list-style: none;
-      padding-left: 0;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .contact-list li {
-      margin-bottom: 0.25rem;
-    }
-
-    /* Footer */
     footer {
       margin-top: 2.5rem;
       padding-top: 1.5rem;
       border-top: 1px solid var(--border);
       font-size: 0.8rem;
-      color: var(--muted);
       text-align: center;
+      color: var(--muted);
     }
 
     @media (max-width: 800px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-        text-align: left;
-      }
-
-      .hero-photo {
-        order: -1;
-        margin-bottom: 0.5rem;
-      }
-
-      .hero-photo img {
-        width: 150px;
-        height: 150px;
-      }
-
-      .two-col {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      nav ul {
-        display: none;
-      }
+      .hero { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+      .two-col { grid-template-columns: 1fr; }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="nav-inner">
-      <div class="brand">
-        <img src="Ritu.jpg" alt="Portrait of Rituparna Datta" class="avatar" />
-        <span>Rituparna Datta</span>
-      </div>
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#pubs">Publications</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <img src="Ritu_linkedIn.jpg" class="avatar" />
+      <span>Rituparna Datta</span>
     </div>
-  </header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#pubs">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <main class="wrapper">
-    <!-- Hero -->
-    <section class="hero" id="about">
-      <div class="hero-main">
-        <h1>Rituparna&nbsp;Datta</h1>
-        <h2>PhD Candidate · Computer Science · University of Virginia</h2>
+<main class="wrapper">
 
-        <div class="hero-tagline">
-          <strong>Research:</strong> Applying Graph Nets, LLMs, and transformers
-          for spatio-temporal modeling and forecasting in healthcare and
-          epidemiology.
-        </div>
+<!-- ABOUT -->
+<section class="hero" id="about">
+  <div>
+    <h1>Rituparna Datta</h1>
+    <h2>PhD Candidate · Computer Science · University of Virginia</h2>
 
-        <p>
-          I am a PhD Candidate in Computer Science at the University of Virginia and a Graduate Research Assistant at the Biocomplexity Institute. My work focuses on healthcare AI, particularly the integration of mechanistic disease models with machine learning and knowledge-augmented LLM systems. I develop models for hospital-level risk prediction, infection forecasting, and clinical decision support using real-world EHR and population data, with emphasis on interpretability, reliability, and deployment in high-stakes clinical settings.
-        </p>
+    <div class="hero-tagline">
+      <strong>Research:</strong> Healthcare AI, hybrid mechanistic–ML systems,
+      Graph Neural Networks, LLMs, and clinical decision support.
+    </div>
 
-        <div class="hero-links">
-          <span class="chip">
-            📄 <strong>CV</strong>
-            <a
-              href="https://biocomplexity.virginia.edu/sites/biocomplexity2024/files/2025-11/CV_Rituparna_Datta.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              >PDF</a
-            >
-          </span>
-          <span class="chip">
-            📚 <strong>Google Scholar</strong>
-            <a
-              href="https://scholar.google.com/citations?user=9n2zvHIAAAAJ&hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Profile</a
-            >
-          </span>
-          <span class="chip">
-            💻 <strong>GitHub</strong>
-            <a
-              href="https://github.com/RituDatta281"
-              target="_blank"
-              rel="noopener noreferrer"
-              >RituDatta281</a
-            >
-          </span>
-        </div>
+    <p>
+      I am a PhD candidate in Computer Science at UVA and a Graduate Research Assistant
+      at the Biocomplexity Institute. My work focuses on integrating mechanistic
+      disease models with machine learning and knowledge-augmented LLM systems
+      for hospital-level risk prediction and infection forecasting.
+    </p>
 
-        <ul class="inline-list" style="margin-top: 0.75rem;">
-          <li>Computational epidemiology</li>
-          <li>Multimodal EHR modeling</li>
-          <li>Graph neural networks</li>
-          <li>Agentic AI</li>
-		  <li>GraphRAG</li>
-          <li>LLM-based reasoning</li>
-        </ul>
-      </div>
+    <div class="hero-links">
+      <span class="chip"><a href="https://biocomplexity.virginia.edu/sites/biocomplexity2024/files/2025-11/CV_Rituparna_Datta.pdf">CV</a></span>
+      <span class="chip"><a href="https://scholar.google.com/citations?user=9n2zvHIAAAAJ">Scholar</a></span>
+      <span class="chip"><a href="https://github.com/RituDatta281">GitHub</a></span>
+    </div>
 
-      <div class="hero-photo">
-        <img src="Ritu_linkedIn.jpg" alt="Portrait of Rituparna Datta" />
-      </div>
-    </section>
+    <ul class="inline-list">
+      <li>Computational epidemiology</li>
+      <li>Multimodal EHR</li>
+      <li>GraphRAG</li>
+      <li>Agentic AI</li>
+      <li>Healthcare LLMs</li>
+    </ul>
+  </div>
 
-    <!-- Research overview & current themes -->
-    <section id="research">
-      <h3>Research</h3>
-      <p class="section-subtitle">
-        I build hybrid mechanistic–ML systems for understanding and
-        forecasting infectious diseases, and knowledge-augmented models for
-        hospital risk prediction and clinical decision support.
-      </p>
+  <div class="hero-photo">
+    <img src="Ritu_linkedIn.jpg" />
+  </div>
+</section>
 
-      <div class="card">
-        <h4>Hybrid mechanistic–ML modeling for hospital-acquired infections</h4>
-        <p>
-          Developing generative models that couple metapopulation-style
-          simulators with neural adapters to predict MRSA infections during
-          a patient’s continuous hospital stay, answer what-if questions for
-          infection control, and provide actionable guidance for clinicians
-          and hospital administrators.
-        </p>
-      </div>
+<!-- NEWS -->
+<section id="news">
+  <h3>News & Updates</h3>
+  <div class="card">
+    <ul style="padding-left:1rem;font-size:0.9rem;">
+      <li><strong>Jan 2026:</strong> GenHAI paper accepted to <strong>IAAI 2026</strong>.</li>
+      <li><strong>Oct 2025:</strong> KAMELEON submitted to <strong>JMIR AI</strong>.</li>
+      <li><strong>Aug 2025:</strong> IEEE Access paper on vaccine hesitancy published.</li>
+    </ul>
+  </div>
+</section>
 
-      <div class="card">
-        <h4>Knowledge-augmented multimodal EHR risk prediction</h4>
-        <p>
-          Designing models that integrate structured EHR data with physician
-          notes and curated medical knowledge to improve prediction of
-          outcomes such as readmission and mortality, while preserving
-          interpretability and supporting narrative, human-readable
-          explanations.
-        </p>
-      </div>
+<!-- PUBLICATIONS -->
+<section id="pubs">
+  <h3>Publications</h3>
 
-      <div class="card">
-        <h4>Spatio-temporal modeling and vaccine hesitancy</h4>
-        <p>
-          Building graph-based models to capture spatio-temporal patterns in
-          vaccine hesitancy and disease spread using claims data, graph
-          neural networks, and active learning for efficient data
-          collection.
-        </p>
-      </div>
-    </section>
+  <!-- GenHAI -->
+  <div class="card">
+    <h4>Prediction of Hospital Associated Infections During Continuous Hospital Stays</h4>
+    <div class="meta">IAAI 2026 (accepted)</div>
 
-    <!-- Publications & recent work -->
-    <section id="pubs">
-      <h3>Selected Publications & Recent Work</h3>
-      <p class="section-subtitle">
-        For a complete and up-to-date list, please see my CV or Google Scholar.
-      </p>
+    <p>Hybrid generative framework for MRSA infection forecasting during patient stays.</p>
 
-      <div class="card">
-		  <h4>
-		    Prediction of Hospital Associated Infections During Continuous
-		    Hospital Stays
-		  </h4>
-		  <div class="meta">
-		    IAAI 2026 (accepted) · R. Datta, M. Kamruzzaman, E. Klein,
-		    G. Madden, X. Deng, A. Vullikanti, P. Bhattacharya
-		  </div>
-		  <p>
-		    Multi-task generative model for predicting MRSA test outcomes over
-		    a patient’s stay, supporting predictive, causal, and
-		    counterfactual queries for hospital infection control.
-		  </p>
-		
-		  <div class="hero-links" style="margin-top: 0.5rem;">
-		    <span class="chip">📄 <a href="https://arxiv.org/abs/2508.13561" target="_blank">PDF</a></span>
-		    <span class="chip">🧪 <a href="https://github.com/RituDatta281/GenHAI" target="_blank">Code</a></span>
-		  </div>
-		</div>
+    <figure class="paper-figure">
+      <img src="figures/genhai_framework.png" />
+      <figcaption>GenHAI framework integrating mechanistic infection dynamics with neural adapters.</figcaption>
+    </figure>
 
-		
+    <div class="hero-links">
+      <span class="chip"><a href="https://arxiv.org/abs/2508.13561">PDF</a></span>
+      <span class="chip"><a href="https://github.com/RituDatta281/GenHAI">Code</a></span>
+    </div>
+  </div>
 
-      <div class="card">
-        <h4>
-          Improving Hospital Risk Prediction with Knowledge-Augmented
-          Multimodal EHR Modeling
-        </h4>
-        <div class="meta">
-          Under submission · R. Datta, J. Cui, V. Reddy, G. Madden,
-          J. Eby, A. Vullikanti
-        </div>
-        <p>
-          Knowledge-augmented framework combining structured EHR data and
-          clinical notes to improve prediction of readmission and mortality
-          while providing interpretable, knowledge-grounded rationales.
-        </p>
-		  <div class="hero-links" style="margin-top: 0.5rem;">
-		    <span class="chip">📄 <a href="https://arxiv.org/abs/2508.01970" target="_blank">PDF</a></span>
-		    <span class="chip">🧪 <a href="https://github.com/RituDatta281/KAMELEON" target="_blank">Code</a></span>
-		  </div>
-      </div>
+  <!-- KAMELEON -->
+  <div class="card">
+    <h4>Improving Hospital Risk Prediction with Knowledge-Augmented Multimodal EHR Modeling</h4>
+    <div class="meta">Under submission</div>
 
-      <div class="card">
-        <h4>
-          Graph-based Prediction of Spatio-Temporal Vaccine Hesitancy from
-          Insurance Claims Data
-        </h4>
-        <div class="meta">
-          IEEE Access · S.A. Moon*, R. Datta*, T. Ferdousi, H. Baek,
-          A. Adiga, A. Marathe, A. Vullikanti (*equal contribution)
-        </div>
-        <p>
-          Graph neural network–based approach for forecasting vaccine
-          hesitancy across regions by combining large-scale claims data with
-          spatial connectivity.
-        </p>
-		  </p>
-		  <div class="hero-links" style="margin-top: 0.5rem;">
-		    <span class="chip">📄 <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10924192" target="_blank">PDF</a></span>
-		  </div>
-      </div>
+    <p>Knowledge-augmented LLM framework for interpretable EHR-based risk prediction.</p>
 
-    </section>
+    <figure class="paper-figure">
+      <img src="figures/kameleon_framework.png" />
+      <figcaption>KAMELEON integrates structured EHR, clinical notes, and medical knowledge.</figcaption>
+    </figure>
 
-    <!-- Experience & Education -->
-    <section class="two-col" id="experience">
-      <div>
-        <h3>Experience</h3>
+    <div class="hero-links">
+      <span class="chip"><a href="https://arxiv.org/abs/2508.01970">PDF</a></span>
+      <span class="chip"><a href="https://github.com/RituDatta281/KAMELEON">Code</a></span>
+    </div>
+  </div>
 
-        <div class="card">
-          <h4>Graduate Research Assistant · University of Virginia</h4>
-          <div class="meta">Aug 2022 – Present · Biocomplexity Institute</div>
-          <p>
-            Working on infection forecasting, hospital-acquired infections,
-            vaccine hesitancy modeling, and genomic prediction using
-            knowledge-augmented ML and epidemiological simulators.
-          </p>
-        </div>
+  <!-- IEEE Access -->
+  <div class="card">
+    <h4>Graph-based Prediction of Spatio-Temporal Vaccine Hesitancy</h4>
+    <div class="meta">IEEE Access</div>
 
-        <div class="card">
-          <h4>Software Engineer · Semion Ltd</h4>
-          <div class="meta">March 2021 – July 2022</div>
-          <p>
-            Developed medical software for radiologists and physicians,
-            applying deep learning to MRI and X-ray data to aid disease
-            diagnosis and reduce false negatives.
-          </p>
-        </div>
+    <figure class="paper-figure">
+      <img src="figures/vaccine_graph_framework.png" />
+      <figcaption>Spatio-temporal graph construction and GNN pipeline.</figcaption>
+    </figure>
 
-        <div class="card">
-          <h4>Graduate Teaching Assistant · University of Virginia</h4>
-          <div class="meta">Spring 2024, Fall 2024, Spring 2025</div>
-          <p>
-            Teaching assistant for Algorithmic Economics and Computer Science
-            Perspective, supporting students with assignments, projects, and
-            course materials.
-          </p>
-        </div>
-      </div>
+    <div class="hero-links">
+      <span class="chip"><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10924192">PDF</a></span>
+    </div>
+  </div>
+</section>
 
-      <div id="education">
-        <h3>Education</h3>
+<!-- EXPERIENCE -->
+<section class="two-col" id="experience">
+  <div>
+    <h3>Experience</h3>
+    <div class="card">
+      <strong>Graduate Research Assistant – UVA</strong>
+      <div class="meta">2022 – Present</div>
+      <p>Healthcare AI, epidemiological modeling, LLM-based systems.</p>
+    </div>
+  </div>
 
-        <div class="card">
-          <h4>PhD in Computer Science</h4>
-          <div class="meta">University of Virginia · 2022 – Present</div>
-          <p>
-            Research interests: GNNs, RNNs, LLMs, computational epidemiology,
-            healthcare systems modeling.
-          </p>
-        </div>
+  <div>
+    <h3>Education</h3>
+    <div class="card"><strong>PhD Computer Science – UVA</strong></div>
+    <div class="card"><strong>ME Computer Science – UVA</strong></div>
+    <div class="card"><strong>BSc CSE – BUET</strong></div>
+  </div>
+</section>
 
-        <div class="card">
-          <h4>ME in Computer Science</h4>
-          <div class="meta">University of Virginia · 2022 – 2024</div>
-          <p>GPA: 4.0/4.0 · Focus on AI and Machine Learning.</p>
-        </div>
+<!-- CONTACT -->
+<section id="contact">
+  <h3>Contact</h3>
+  <div class="card">
+    hht9zt [at] virginia.edu<br/>
+    ritudatta281 [at] gmail.com
+  </div>
+</section>
 
-        <div class="card">
-          <h4>BSc in Computer Science and Engineering</h4>
-          <div class="meta">
-            Bangladesh University of Engineering and Technology (BUET)
-          </div>
-          <p>
-            GPA: 3.63/4.0 · Coursework in algorithms, machine learning,
-            graphics, image processing, systems, and databases.
-          </p>
-        </div>
-      </div>
-    </section>
+<footer>
+  © <span id="year"></span> Rituparna Datta
+</footer>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h3>Contact</h3>
-      <p class="section-subtitle">
-        I’m happy to connect about research collaborations, internships, and
-        applied ML in healthcare, epidemiology, and network science.
-      </p>
+</main>
 
-      <div class="card">
-        <ul class="contact-list">
-          <li><strong>Email:</strong> hht9zt&nbsp;[at]&nbsp;virginia.edu</li>
-          <li><strong>Alt:</strong> ritudatta281&nbsp;[at]&nbsp;gmail.com</li>
-          <li>
-            <strong>GitHub:</strong>
-            <a href="https://github.com/RituDatta281" target="_blank" rel="noopener noreferrer">
-              github.com/RituDatta281
-            </a>
-          </li>
-          <li>
-            <strong>Google Scholar:</strong>
-            <a
-              href="https://scholar.google.com/citations?user=9n2zvHIAAAAJ&hl=en"
-              target="_blank"
-              rel="noopener noreferrer"
-              >scholar profile</a
-            >
-          </li>
-          <li>
-            <strong>Biocomplexity profile:</strong>
-            <a
-              href="https://biocomplexity.virginia.edu/our-team/rituparna-datta"
-              target="_blank"
-              rel="noopener noreferrer"
-              >biocomplexity.virginia.edu/our-team/rituparna-datta</a
-            >
-          </li>
-        </ul>
-      </div>
-    </section>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
-    <footer>
-      © <span id="year"></span> Rituparna Datta · Charlottesville, VA
-    </footer>
-  </main>
-
-  <script>
-    // Keep year up to date
-    document.getElementById("year").textContent =
-      new Date().getFullYear().toString();
-  </script>
 </body>
 </html>
