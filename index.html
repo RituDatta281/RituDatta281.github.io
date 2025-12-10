@@ -347,18 +347,17 @@
       </p>
     </div>
 
-    <!-- Right: figure -->
-    <div>
+      <figure class="paper-figure">
       <img src="figures/MRSA-workflow.png"
            alt="GenHAI MRSA workflow and clinical queries">
-    </div>
-  </div>
 
   <figcaption style="margin-top:0.4rem; font-size:0.78rem; color:var(--muted); text-align:center;">
     Examples of infection-risk questions during a patient’s hospital stay. Q1 arises on
     admission, while Q2–Q4 correspond to clinical queries during hospitalization that
     can be answered by GenHAI.
   </figcaption>
+      </figure>
+  </div>
 
   <div class="hero-links" style="margin-top:0.6rem;">
     <span class="chip"><a href="https://arxiv.org/abs/2508.13561">PDF</a></span>
@@ -373,47 +372,41 @@
   <div class="meta">Under submission</div>
 
   <div class="paper-row">
-    <!-- Left: text -->
     <div class="paper-text">
       <p>
-        <strong>KAMELEON</strong> is a knowledge-augmented multimodal framework that integrates
-        structured EHR data, clinical notes, and external medical knowledge using
-        Large Language Models (LLMs) to improve hospital risk prediction. The framework
-        emphasizes interpretability and robustness, enabling human-readable rationales
-        alongside accurate predictive modeling.
+        <strong>KAMELEON</strong> is a knowledge-augmented multimodal framework that
+        integrates structured EHR data, clinical notes, and external medical knowledge
+        using Large Language Models (LLMs) to improve hospital risk prediction.
+        The framework emphasizes interpretability and robustness, enabling
+        human-readable rationales alongside accurate predictive modeling.
       </p>
     </div>
 
-    <!-- Right: figure -->
-    <div>
+    <!-- Right: figure + caption (kept together) -->
+    <figure class="paper-figure">
       <img src="figures/framework_m1m2-1.png"
-           alt="KAMELEON two-stage knowledge-augmented framework">
-    </div>
+           alt="KAMELEON knowledge-augmented multimodal framework" />
+      <figcaption>
+        Two-stage knowledge-augmented framework. Step 1 (M1) performs
+        knowledge-enhanced context generation using an LLM, while Step 2 (M2)
+        integrates LLM outputs with structured EHR data for final machine-learning
+        prediction.
+      </figcaption>
+    </figure>
   </div>
 
-  <figcaption style="margin-top:0.4rem; font-size:0.78rem; color:var(--muted); text-align:center;">
-    Two-stage knowledge-augmented framework. Step 1 (M1) performs knowledge-enhanced
-    context generation using an LLM, while Step 2 (M2) integrates LLM outputs with
-    structured EHR data for final machine-learning prediction.
-  </figcaption>
-
-  <div class="hero-links" style="margin-top:0.6rem;">
+  <div class="hero-links" style="margin-top:0.75rem;">
     <span class="chip"><a href="https://arxiv.org/abs/2508.01970">PDF</a></span>
     <span class="chip"><a href="https://github.com/RituDatta281/KAMELEON">Code</a></span>
   </div>
 </div>
-
   <!-- IEEE Access -->
 
 <div class="card">
   <h4>Graph-based Prediction of Spatio-Temporal Vaccine Hesitancy</h4>
-  <div class="meta">
-    IEEE Access · S.A. Moon*, R. Datta*, T. Ferdousi, H. Baek,
-    A. Adiga, A. Marathe, A. Vullikanti (*equal contribution)
-  </div>
+  <div class="meta"> IEEE Access </div>
 
   <div class="paper-row">
-    <!-- Left: description -->
     <div class="paper-text">
       <p>
         This work introduces a hybrid spatio-temporal framework,
@@ -431,15 +424,14 @@
       </p>
     </div>
 
-    <!-- Right: figure -->
-    <div>
+    <figure class="paper-figure">
       <img src="figures/Framework_.png" />
-    </div>
-
      <figcaption style="margin-top:0.4rem; font-size:0.78rem; color:var(--muted); text-align:center;">
    Architecture of the spatio-temporal graph-based node-level regression learning, VaxHesSTL, for the prediction of
 vaccine hesitancy.
   </figcaption>
+  </figure>
+   </div>
 
   <div class="hero-links" style="margin-top: 0.75rem;">
     <span class="chip">
