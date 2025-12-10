@@ -185,19 +185,23 @@
 
     .paper-figure {
       margin-top: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;   /* ✅ centers image + caption */
     }
-
+    
     .paper-figure img {
-      width: 60%;
-      max-width: 520px;
+      width: 40%;
+      max-width: 400px;
       border-radius: 0.6rem;
       border: 1px solid var(--border);
     }
-
+    
     .paper-figure figcaption {
       margin-top: 0.3rem;
       font-size: 0.78rem;
       color: var(--muted);
+      text-align: center;    /* ✅ centers caption text */
     }
 
     .two-col {
@@ -303,11 +307,15 @@
     <h4>Prediction of Hospital-Associated Infections During Continuous Hospital Stays</h4>
     <div class="meta">IAAI 2026 (accepted)</div>
 
-    <p>Hybrid generative framework for MRSA infection forecasting during patient stays.</p>
+    <p>We present GenHAI, a hybrid generative modeling framework designed to predict and reason about
+hospital-acquired MRSA infections during a patient’s continuous hospital stay.
+The model supports time-evolving risk estimation, forecasting of future test outcomes,
+and counterfactual what-if analysis to aid clinical decision-making and infection control.</p>
 
     <figure class="paper-figure">
       <img src="figures/MRSA-workflow.png" />
-      <figcaption>GenHAI framework integrating mechanistic infection dynamics with neural adapters.</figcaption>
+      <figcaption>Examples of different questions related to infection risk for a patient during their hospital stay.
+Q1 arises on patient admission, while Q2, Q3, and Q4 are examples of questions clinicians ask during the patient's stay in the hospital, which can be answered by GenHAI.</figcaption>
     </figure>
 
     <div class="hero-links">
@@ -321,11 +329,18 @@
     <h4>Improving Hospital Risk Prediction with Knowledge-Augmented Multimodal EHR Modeling</h4>
     <div class="meta">Under submission</div>
 
-    <p>Knowledge-augmented LLM framework for interpretable EHR-based risk prediction.</p>
+    <p>KAMELEON is a knowledge-augmented multimodal framework that integrates structured EHR data,
+clinical notes, and external medical knowledge using Large Language Models (LLMs)
+to improve hospital risk prediction.
+The framework emphasizes interpretability and robustness, enabling human-readable
+rationales alongside accurate predictive modeling.</p>
 
     <figure class="paper-figure">
       <img src="figures/framework_m1m2-1.png" />
-      <figcaption>KAMELEON integrates structured EHR, clinical notes, and medical knowledge.</figcaption>
+      <figcaption>A two-stage hybrid framework for predictive tasks, integrating structured and unstructured patient data with
+Large Language Models (LLMs). Step 1 (M1) focuses on knowledge-enhanced context generation with an initial
+LLM output, while Step 2 (M2) integrates the finetuned LLM outputs with structured data by creating an embedding,
+for final ML prediction.</figcaption>
     </figure>
 
     <div class="hero-links">
@@ -338,10 +353,14 @@
   <div class="card">
     <h4>Graph-based Prediction of Spatio-Temporal Vaccine Hesitancy</h4>
     <div class="meta">IEEE Access</div>
+   <p>
+This work introduces a hybrid spatio-temporal framework (named <strong>VaxHesSTL</strong>) that combines a Graph Neural Network (GNN) to model spatial relationships between ZIP codes with a Recurrent Neural Network (RNN) to capture temporal dynamics, enabling prediction of vaccine hesitancy at the ZIP-code level. The GNN leverages an aggregated contact network (rather than just geographic proximity) derived from population mobility to more realistically capture community mixing, while the RNN learns temporal trends from historical claims-based hesitancy data. When trained on a large claims dataset covering over five million individuals across multiple years, VaxHesSTL outperforms time-series–only baselines, and by using an active-learning strategy, it can forecast hesitancy for all ZIP codes even when full ground-truth data is only available for a small subset. This makes the method particularly valuable for identifying local hotspots of vaccine hesitancy and enabling more targeted public-health interventions.
+</p>
 
     <figure class="paper-figure">
       <img src="figures/Framework_.png" />
-      <figcaption>Spatio-temporal graph construction and GNN pipeline.</figcaption>
+      <figcaption> Architecture of the spatio-temporal graph-based node-level regression learning, VaxHesSTL, for the prediction of
+vaccine hesitancy.</figcaption>
     </figure>
 
     <div class="hero-links">
