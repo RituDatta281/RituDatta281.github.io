@@ -4,11 +4,8 @@
   <meta charset="UTF-8" />
   <title>Rituparna Datta</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Homepage of Rituparna Datta, PhD candidate in Computer Science at the University of Virginia."
-  />
-  <!-- <link rel="icon" href="Ritu_linkedIn.jpg" /> -->
+  <meta name="description"
+        content="Homepage of Rituparna Datta, PhD candidate in Computer Science at the University of Virginia." />
 
   <style>
     :root {
@@ -21,12 +18,7 @@
       --border: #e5e7eb;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
 
     body {
@@ -39,24 +31,18 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 1.5rem 1.25rem 3rem;
-    }
-
     /* Header */
     header {
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 50;
       backdrop-filter: blur(10px);
       background: color-mix(in srgb, var(--bg) 90%, transparent);
       border-bottom: 1px solid var(--border);
     }
 
     .nav-inner {
-      max-width: 960px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0.6rem 1.25rem;
       display: flex;
@@ -64,31 +50,15 @@
       align-items: center;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-
-    .avatar {
-      width: 30px;
-      height: 30px;
-      border-radius: 999px;
-      object-fit: cover;
-      border: 1px solid var(--border);
-    }
-
     nav ul {
       list-style: none;
       display: flex;
-      gap: 0.9rem;
-      font-size: 0.86rem;
+      gap: 1rem;
+      font-size: 0.9rem;
     }
 
     nav a {
-      padding: 0.3rem 0.5rem;
+      padding: 0.25rem 0.6rem;
       border-radius: 999px;
     }
 
@@ -97,22 +67,47 @@
       text-decoration: none;
     }
 
-    /* Hero */
-    .hero {
-      display: grid;
-      grid-template-columns: 3fr 2fr;
-      gap: 2rem;
-      padding: 2rem 0;
-      align-items: center;
+    /* Main layout */
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
     }
 
-    .hero-photo img {
-      width: 190px;
-      height: 190px;
+    .layout {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* LEFT: Sticky intro */
+    .intro {
+      position: sticky;
+      top: 90px;
+      align-self: start;
+    }
+
+    .intro img {
+      width: 180px;
+      height: 180px;
       border-radius: 999px;
       border: 2px solid var(--border);
       object-fit: cover;
       box-shadow: 0 18px 45px rgba(15, 23, 42, 0.22);
+      margin-bottom: 1rem;
+    }
+
+    .intro h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .intro h2 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
     }
 
     .hero-tagline {
@@ -120,16 +115,16 @@
       padding: 0.7rem 0.9rem;
       border-radius: 0.9rem;
       border: 1px solid var(--border);
-      margin-bottom: 1rem;
       font-size: 0.85rem;
       color: var(--muted);
+      margin-bottom: 1rem;
     }
 
     .hero-links {
       display: flex;
       gap: 0.5rem;
       flex-wrap: wrap;
-      margin-top: 0.6rem;
+      margin-bottom: 0.75rem;
     }
 
     .chip {
@@ -145,127 +140,95 @@
       gap: 0.35rem;
       flex-wrap: wrap;
       list-style: none;
-      margin-top: 0.75rem;
+      margin-top: 0.5rem;
     }
 
     ul.inline-list li {
       background: var(--accent-soft);
       border-radius: 999px;
-      padding: 0.15rem 0.55rem;
-      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.78rem;
     }
 
-    /* Sections */
-    section { margin-top: 2.5rem; }
+    /* RIGHT: Content */
+    section { margin-bottom: 3rem; }
 
-    section h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .section-subtitle {
-      font-size: 0.86rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
     }
 
     .card {
       background: var(--bg-alt);
       border: 1px solid var(--border);
       border-radius: 0.9rem;
-      padding: 1rem 1.1rem;
-      margin-bottom: 1rem;
+      padding: 1.1rem;
+      margin-bottom: 1.1rem;
     }
 
-    .card .meta {
+    .meta {
       font-size: 0.82rem;
       color: var(--muted);
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.5rem;
     }
 
     .paper-row {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr; /* text a bit wider than figure */
-    gap: 1.2rem;
-    align-items: center;
-    margin-top: 0.75rem;
-  }
-  
-  .paper-row img {
-    width: 100%;
-    max-width: 420px;
-    border-radius: 0.6rem;
-    border: 1px solid var(--border);
-    justify-self: center;
-  }
-  
-  .paper-row .paper-text {
-    font-size: 0.9rem;
-    color: var(--muted);
-  }
-  
-  @media (max-width: 800px) {
-    .paper-row {
-      grid-template-columns: 1fr;  /* stack on mobile */
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 1.2rem;
+      align-items: center;
     }
-  }
 
+    .paper-text { font-size: 0.9rem; color: var(--muted); }
 
     .paper-figure {
-      margin-top: 0.75rem;
       display: flex;
       flex-direction: column;
-      align-items: center;   /* ✅ centers image + caption */
+      align-items: center;
     }
-    
+
     .paper-figure img {
-      width: 80%;
-      max-width: 600px;
+      width: 100%;
+      max-width: 420px;
       border-radius: 0.6rem;
       border: 1px solid var(--border);
     }
-    
+
     .paper-figure figcaption {
-      margin-top: 0.3rem;
+      margin-top: 0.4rem;
       font-size: 0.7rem;
       color: var(--muted);
-      text-align: center;    /* ✅ centers caption text */
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1.4fr 1.1fr;
-      gap: 1.5rem;
+      text-align: center;
     }
 
     footer {
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
       border-top: 1px solid var(--border);
+      padding-top: 1rem;
       font-size: 0.8rem;
-      text-align: center;
       color: var(--muted);
+      text-align: center;
     }
 
-    @media (max-width: 800px) {
-      .hero { grid-template-columns: 1fr; }
-      nav ul { display: none; }
-      .two-col { grid-template-columns: 1fr; }
+    /* Mobile */
+    @media (max-width: 950px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      .intro {
+        position: relative;
+        top: 0;
+      }
     }
   </style>
 </head>
 
 <body>
+
 <header>
   <div class="nav-inner">
-    <div class="brand">
-      <img src="Ritu_linkedIn.jpg" class="avatar" />
-      <span>Rituparna Datta</span>
-    </div>
+    <strong>Rituparna Datta</strong>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <!-- <li><a href="#news">News</a></li> -->
         <li><a href="#pubs">Publications</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -275,60 +238,47 @@
 </header>
 
 <main class="wrapper">
+  <div class="layout">
 
-<!-- ABOUT -->
-<section class="hero" id="about">
-  <div>
-    <h1>Rituparna Datta</h1>
-    <h2>PhD Candidate · Computer Science · University of Virginia</h2>
+    <!-- LEFT -->
+    <aside class="intro">
+      <img src="Ritu_linkedIn.jpg" alt="Rituparna Datta" />
+      <h1>Rituparna Datta</h1>
+      <h2>PhD Candidate · Computer Science<br/>University of Virginia</h2>
 
-    <div class="hero-tagline">
-      <strong>Research:</strong> Healthcare AI, Hybrid Mechanistic–ML systems,
-      Graph Neural Networks, Reasoning-Based LLMs, and Clinical Decision Support.
-    </div>
+      <div class="hero-tagline">
+        <strong>Research:</strong> Healthcare AI, hybrid mechanistic–ML systems,
+        GNNs, reasoning-based LLMs, and clinical decision support.
+      </div>
 
-    <p>
-      I am a PhD candidate in Computer Science at UVA and a Graduate Research Assistant
-      at the Biocomplexity Institute. My work focuses on integrating mechanistic
-      disease models with machine learning and knowledge-augmented LLM systems
-      for hospital-level risk prediction and infection forecasting.
-    </p>
+      <p style="font-size:0.9rem;color:var(--muted);margin-bottom:0.8rem;">
+        PhD candidate at UVA and Graduate Research Assistant at the Biocomplexity Institute.
+        I work on integrating mechanistic disease models with machine learning and
+        knowledge-augmented LLM systems for hospital-level risk prediction and infection
+        forecasting.
+      </p>
 
-    <div class="hero-links">
-      <span class="chip"><a href="https://biocomplexity.virginia.edu/sites/biocomplexity2024/files/2025-11/CV_Rituparna_Datta.pdf">CV</a></span>
-      <span class="chip"><a href="https://scholar.google.com/citations?user=9n2zvHIAAAAJ">Scholar</a></span>
-      <span class="chip"><a href="https://github.com/RituDatta281">GitHub</a></span>
-    </div>
+      <div class="hero-links">
+        <span class="chip"><a href="https://biocomplexity.virginia.edu/sites/biocomplexity2024/files/2025-11/CV_Rituparna_Datta.pdf">CV</a></span>
+        <span class="chip"><a href="https://scholar.google.com/citations?user=9n2zvHIAAAAJ">Scholar</a></span>
+        <span class="chip"><a href="https://github.com/RituDatta281">GitHub</a></span>
+      </div>
 
-    <ul class="inline-list">
-      <li>Computational epidemiology</li>
-      <li>Multimodal EHR</li>
-      <li>GraphRAG</li>
-      <li>Agentic AI</li>
-      <li>Healthcare LLMs</li>
-    </ul>
-  </div>
+      <ul class="inline-list">
+        <li>Computational epidemiology</li>
+        <li>Multimodal EHR</li>
+        <li>GraphRAG</li>
+        <li>Agentic AI</li>
+        <li>Healthcare LLMs</li>
+      </ul>
+    </aside>
 
-  <div class="hero-photo">
-    <img src="Ritu_linkedIn.jpg" />
-  </div>
-</section>
+    <!-- RIGHT -->
+    <div>
 
-<!-- NEWS -->
-<!-- <section id="news">
-  <h3>News & Updates</h3>
-  <div class="card">
-    <ul style="padding-left:1rem;font-size:0.9rem;">
-      <li><strong>Jan 2026:</strong> GenHAI paper accepted to <strong>IAAI 2026</strong>.</li>
-      <li><strong>Oct 2025:</strong> KAMELEON submitted to <strong>JMIR AI</strong>.</li>
-      <li><strong>Aug 2025:</strong> IEEE Access paper on vaccine hesitancy published.</li>
-    </ul>
-  </div>
-</section> -->
-
-<!-- PUBLICATIONS -->
-<section id="pubs">
-  <h3>Publications</h3>
+      <!-- PUBLICATIONS -->
+      <section id="pubs">
+        <h3>Publications</h3>
 
   <!-- GenHAI -->
   <div class="card">
