@@ -8,7 +8,7 @@
     name="description"
     content="Homepage of Rituparna Datta, PhD candidate in Computer Science at the University of Virginia."
   />
-  <link rel="icon" href="Ritu_linkedIn.jpg" />
+  <!-- <link rel="icon" href="Ritu_linkedIn.jpg" /> -->
 
   <style>
     :root {
@@ -232,7 +232,7 @@
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#news">News</a></li>
+        <!-- <li><a href="#news">News</a></li> -->
         <li><a href="#pubs">Publications</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -282,7 +282,7 @@
 </section>
 
 <!-- NEWS -->
-<section id="news">
+<!-- <section id="news">
   <h3>News & Updates</h3>
   <div class="card">
     <ul style="padding-left:1rem;font-size:0.9rem;">
@@ -291,7 +291,7 @@
       <li><strong>Aug 2025:</strong> IEEE Access paper on vaccine hesitancy published.</li>
     </ul>
   </div>
-</section>
+</section> -->
 
 <!-- PUBLICATIONS -->
 <section id="pubs">
@@ -350,42 +350,123 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section class="two-col" id="experience">
-  <div>
-    <h3>Experience</h3>
-    <div class="card">
-      <strong>Graduate Research Assistant – UVA</strong>
-      <div class="meta">2022 – Present</div>
-      <p>Healthcare AI, epidemiological modeling, LLM-based systems.</p>
-    </div>
-  </div>
+ <section class="two-col" id="experience">
+      <div>
+        <h3>Experience</h3>
 
-  <div>
-    <h3>Education</h3>
-    <div class="card"><strong>PhD Computer Science – UVA</strong></div>
-    <div class="card"><strong>ME Computer Science – UVA</strong></div>
-    <div class="card"><strong>BSc CSE – BUET</strong></div>
-  </div>
-</section>
+        <div class="card">
+          <h4>Graduate Research Assistant · University of Virginia</h4>
+          <div class="meta">Aug 2022 – Present · Biocomplexity Institute</div>
+          <p>
+            Working on infection forecasting, hospital-acquired infections,
+            vaccine hesitancy modeling, and genomic prediction using
+            knowledge-augmented ML and epidemiological simulators.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Software Engineer · Semion Ltd</h4>
+          <div class="meta">March 2021 – July 2022</div>
+          <p>
+            Developed medical software for radiologists and physicians,
+            applying deep learning to MRI and X-ray data to aid disease
+            diagnosis and reduce false negatives.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Graduate Teaching Assistant · University of Virginia</h4>
+          <div class="meta">Spring 2024, Fall 2024, Spring 2025</div>
+          <p>
+            Teaching assistant for Algorithmic Economics and Computer Science
+            Perspective, supporting students with assignments, projects, and
+            course materials.
+          </p>
+        </div>
+      </div>
+
+      <div id="education">
+        <h3>Education</h3>
+
+        <div class="card">
+          <h4>PhD in Computer Science</h4>
+          <div class="meta">University of Virginia · 2022 – Present</div>
+          <p>
+            Research interests: GNNs, RNNs, LLMs, computational epidemiology,
+            healthcare systems modeling.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>ME in Computer Science</h4>
+          <div class="meta">University of Virginia · 2022 – 2024</div>
+          <p>GPA: 4.0/4.0 · Focus on Graph and Machine Learning.</p>
+        </div>
+
+        <div class="card">
+          <h4>BSc in Computer Science and Engineering</h4>
+          <div class="meta">
+            Bangladesh University of Engineering and Technology (BUET)
+          </div>
+          <p>
+            GPA: 3.63/4.0 · Coursework in algorithms, machine learning,
+            graphics, image processing, systems, and databases.
+          </p>
+        </div>
+      </div>
+    </section>
+
 
 <!-- CONTACT -->
-<section id="contact">
-  <h3>Contact</h3>
-  <div class="card">
-    hht9zt [at] virginia.edu<br/>
-    ritudatta281 [at] gmail.com
-  </div>
-</section>
+    <section id="contact">
+      <h3>Contact</h3>
+      <p class="section-subtitle">
+        I’m happy to connect about research collaborations, internships, and
+        applied ML in healthcare, epidemiology, and network science.
+      </p>
 
-<footer>
-  © <span id="year"></span> Rituparna Datta
-</footer>
+      <div class="card">
+        <ul class="contact-list">
+          <li><strong>Email:</strong> hht9zt&nbsp;[at]&nbsp;virginia.edu</li>
+          <li><strong>Alt:</strong> ritudatta281&nbsp;[at]&nbsp;gmail.com</li>
+          <li>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/RituDatta281" target="_blank" rel="noopener noreferrer">
+              github.com/RituDatta281
+            </a>
+          </li>
+          <li>
+            <strong>Google Scholar:</strong>
+            <a
+              href="https://scholar.google.com/citations?user=9n2zvHIAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              >scholar profile</a
+            >
+          </li>
+          <li>
+            <strong>Biocomplexity profile:</strong>
+            <a
+              href="https://biocomplexity.virginia.edu/our-team/rituparna-datta"
+              target="_blank"
+              rel="noopener noreferrer"
+              >biocomplexity.virginia.edu/our-team/rituparna-datta</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
 
-</main>
+    <footer>
+      © <span id="year"></span> Rituparna Datta · Charlottesville, VA
+    </footer>
+  </main>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <script>
+    // Keep year up to date
+    document.getElementById("year").textContent =
+      new Date().getFullYear().toString();
+  </script>
 
 </body>
 </html>
