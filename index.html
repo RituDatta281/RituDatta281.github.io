@@ -183,6 +183,34 @@
       margin-bottom: 0.35rem;
     }
 
+    .paper-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* text a bit wider than figure */
+    gap: 1.2rem;
+    align-items: center;
+    margin-top: 0.75rem;
+  }
+  
+  .paper-row img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 0.6rem;
+    border: 1px solid var(--border);
+    justify-self: center;
+  }
+  
+  .paper-row .paper-text {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  
+  @media (max-width: 800px) {
+    .paper-row {
+      grid-template-columns: 1fr;  /* stack on mobile */
+    }
+  }
+
+
     .paper-figure {
       margin-top: 0.75rem;
       display: flex;
@@ -304,52 +332,126 @@
 
   <!-- GenHAI -->
   <div class="card">
-    <h4>Prediction of Hospital-Associated Infections During Continuous Hospital Stays</h4>
-    <div class="meta">IAAI 2026 (accepted)</div>
+  <h4>Prediction of Hospital-Associated Infections During Continuous Hospital Stays</h4>
+  <div class="meta">IAAI 2026 (accepted)</div>
 
-    <p>We present GenHAI, a hybrid generative modeling framework designed to predict and reason about
-hospital-acquired MRSA infections during a patient’s continuous hospital stay.
-The model supports time-evolving risk estimation, forecasting of future test outcomes,
-and counterfactual what-if analysis to aid clinical decision-making and infection control.</p>
+  <div class="paper-row">
+    <!-- Left: text -->
+    <div class="paper-text">
+      <p>
+        We present <strong>GenHAI</strong>, a hybrid generative modeling framework designed to
+        predict and reason about hospital-acquired MRSA infections during a patient’s
+        continuous hospital stay. The model supports time-evolving risk estimation,
+        forecasting of future test outcomes, and counterfactual what-if analysis to aid
+        clinical decision-making and infection control.
+      </p>
+    </div>
 
-    <figure class="paper-figure">
-      <img src="figures/MRSA-workflow.png" />
-      <figcaption>Examples of different questions related to infection risk for a patient during their hospital stay.
-Q1 arises on patient admission, while Q2, Q3, and Q4 are examples of questions clinicians ask during the patient's stay in the hospital, which can be answered by GenHAI.</figcaption>
-    </figure>
-
-    <div class="hero-links">
-      <span class="chip"><a href="https://arxiv.org/abs/2508.13561">PDF</a></span>
-      <span class="chip"><a href="https://github.com/RituDatta281/GenHAI">Code</a></span>
+    <!-- Right: figure -->
+    <div>
+      <img src="figures/MRSA-workflow.png"
+           alt="GenHAI MRSA workflow and clinical queries">
     </div>
   </div>
+
+  <figcaption style="margin-top:0.4rem; font-size:0.78rem; color:var(--muted); text-align:center;">
+    Examples of infection-risk questions during a patient’s hospital stay. Q1 arises on
+    admission, while Q2–Q4 correspond to clinical queries during hospitalization that
+    can be answered by GenHAI.
+  </figcaption>
+
+  <div class="hero-links" style="margin-top:0.6rem;">
+    <span class="chip"><a href="https://arxiv.org/abs/2508.13561">PDF</a></span>
+    <span class="chip"><a href="https://github.com/RituDatta281/GenHAI">Code</a></span>
+  </div>
+</div>
+
 
   <!-- KAMELEON -->
   <div class="card">
-    <h4>Improving Hospital Risk Prediction with Knowledge-Augmented Multimodal EHR Modeling</h4>
-    <div class="meta">Under submission</div>
+  <h4>Improving Hospital Risk Prediction with Knowledge-Augmented Multimodal EHR Modeling</h4>
+  <div class="meta">Under submission</div>
 
-    <p>KAMELEON is a knowledge-augmented multimodal framework that integrates structured EHR data,
-clinical notes, and external medical knowledge using Large Language Models (LLMs)
-to improve hospital risk prediction.
-The framework emphasizes interpretability and robustness, enabling human-readable
-rationales alongside accurate predictive modeling.</p>
+  <div class="paper-row">
+    <!-- Left: text -->
+    <div class="paper-text">
+      <p>
+        <strong>KAMELEON</strong> is a knowledge-augmented multimodal framework that integrates
+        structured EHR data, clinical notes, and external medical knowledge using
+        Large Language Models (LLMs) to improve hospital risk prediction. The framework
+        emphasizes interpretability and robustness, enabling human-readable rationales
+        alongside accurate predictive modeling.
+      </p>
+    </div>
 
-    <figure class="paper-figure">
-      <img src="figures/framework_m1m2-1.png" />
-      <figcaption>A two-stage hybrid framework for predictive tasks, integrating structured and unstructured patient data with
-Large Language Models (LLMs). Step 1 (M1) focuses on knowledge-enhanced context generation with an initial
-LLM output, while Step 2 (M2) integrates the finetuned LLM outputs with structured data by creating an embedding,
-for final ML prediction.</figcaption>
-    </figure>
-
-    <div class="hero-links">
-      <span class="chip"><a href="https://arxiv.org/abs/2508.01970">PDF</a></span>
-      <span class="chip"><a href="https://github.com/RituDatta281/KAMELEON">Code</a></span>
+    <!-- Right: figure -->
+    <div>
+      <img src="figures/framework_m1m2-1.png"
+           alt="KAMELEON two-stage knowledge-augmented framework">
     </div>
   </div>
 
+  <figcaption style="margin-top:0.4rem; font-size:0.78rem; color:var(--muted); text-align:center;">
+    Two-stage knowledge-augmented framework. Step 1 (M1) performs knowledge-enhanced
+    context generation using an LLM, while Step 2 (M2) integrates LLM outputs with
+    structured EHR data for final machine-learning prediction.
+  </figcaption>
+
+  <div class="hero-links" style="margin-top:0.6rem;">
+    <span class="chip"><a href="https://arxiv.org/abs/2508.01970">PDF</a></span>
+    <span class="chip"><a href="https://github.com/RituDatta281/KAMELEON">Code</a></span>
+  </div>
+</div>
+
   <!-- IEEE Access -->
+
+<div class="card">
+  <h4>Graph-based Prediction of Spatio-Temporal Vaccine Hesitancy</h4>
+  <div class="meta">
+    IEEE Access · S.A. Moon*, R. Datta*, T. Ferdousi, H. Baek,
+    A. Adiga, A. Marathe, A. Vullikanti (*equal contribution)
+  </div>
+
+  <div class="paper-row">
+    <!-- Left: description -->
+    <div class="paper-text">
+      <p>
+        This work introduces a hybrid spatio-temporal framework,
+        <strong>VaxHesSTL</strong>, that combines a Graph Neural Network (GNN)
+        to model spatial relationships between ZIP codes with a Recurrent
+        Neural Network (RNN) to capture temporal dynamics, enabling
+        ZIP-code–level prediction of vaccine hesitancy.
+      </p>
+      <p>
+        The model leverages an aggregated contact network derived from
+        population mobility rather than geographic proximity alone,
+        and uses an active learning strategy to accurately forecast
+        hesitancy even when ground-truth data is available for only
+        a subset of regions.
+      </p>
+    </div>
+
+    <!-- Right: figure -->
+    <div>
+      <img src="figures/Framework_.png" />
+    </div>
+
+     <figcaption style="margin-top:0.4rem; font-size:0.78rem; color:var(--muted); text-align:center;">
+   Architecture of the spatio-temporal graph-based node-level regression learning, VaxHesSTL, for the prediction of
+vaccine hesitancy.
+  </figcaption>
+
+  <div class="hero-links" style="margin-top: 0.75rem;">
+    <span class="chip">
+      📄 <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10924192" target="_blank">
+        PDF
+      </a>
+    </span>
+  </div>
+</div>
+
+
+  <!-- 
   <div class="card">
     <h4>Graph-based Prediction of Spatio-Temporal Vaccine Hesitancy</h4>
     <div class="meta">IEEE Access</div>
@@ -367,7 +469,7 @@ vaccine hesitancy.</figcaption>
       <span class="chip"><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10924192">PDF</a></span>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- EXPERIENCE -->
  <section class="two-col" id="experience">
