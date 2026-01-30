@@ -376,7 +376,48 @@
     <span class="chip"><a href="https://github.com/RituDatta281/KAMELEON">Code</a></span>
   </div>
 </div>
+
+        <!-- EpiAgent --> 
+
+<div class="card">
+  <h4>Agentic Framework for Epidemiological Modeling</h4>
+  <div class="meta">Under submission</div>
+
+  <div class="paper-row">
+    <div class="paper-text">
+      <p>
+        <strong>EPIAGENT</strong> is an agentic framework that automatically synthesizes, calibrates, 
+        verifies, and refines epidemiological simulators by modeling disease progression as an iterative 
+        program synthesis problem.  A central design choice is an explicit epidemiological flow
+        graph intermediate representation that links scenario specifications to model structure and 
+        enables strong, modular correctness checks before code is generated
+      </p>
+    </div>
+
+    <!-- Right: figure + caption (kept together) -->
+    <figure class="paper-figure">
+      <img src="figures/pipelineWMethod.png"
+           alt="EpiAgent" />
+      <figcaption>
+       Agentic pipeline for epidemic scenario modeling and ensemble simulation. Natural-language scenarios are augmented with 
+        domain knowledge (§4.1), to produce prompts that guide flow-graph synthesis (§4.2). Generated graphs are iteratively verified to enforce
+        valid compartmental structure and transitions. Given a verified graph and scenario description, an LLM planner instantiates executable
+        simulator code with automated error recovery (§4.3). Simulators are calibrated on observed data and evaluated as a scenario ensemble
+        (§4.4). A multi-agent verification and validation stage enforces epidemiological and scenario-consistency constraints, retaining only
+        structurally and behaviorally valid models (§4.5).
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="hero-links" style="margin-top:0.75rem;">
+    <span class="chip"><a href="https://drive.google.com/file/d/111YWWLyK5lznRYphiVcQp1ECH9dBoyzJ/view?usp=sharing">PDF</a></span>
+    <!-- <span class="chip"><a href="https://github.com/RituDatta281/KAMELEON">Code</a></span> -->
+  </div>
+</div>
+
+        
   <!-- IEEE Access -->
+        
 
 <div class="card">
   <h4>Graph-Based Prediction of Spatio-Temporal Vaccine Hesitancy From Insurance Claims Data</h4>
