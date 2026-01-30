@@ -399,12 +399,11 @@
       <img src="figures/pipelineWMethod.png"
            alt="EpiAgent" />
       <figcaption>
-       Agentic pipeline for epidemic scenario modeling and ensemble simulation. Natural-language scenarios are augmented with 
-        domain knowledge (§4.1), to produce prompts that guide flow-graph synthesis (§4.2). Generated graphs are iteratively verified to enforce
-        valid compartmental structure and transitions. Given a verified graph and scenario description, an LLM planner instantiates executable
-        simulator code with automated error recovery (§4.3). Simulators are calibrated on observed data and evaluated as a scenario ensemble
-        (§4.4). A multi-agent verification and validation stage enforces epidemiological and scenario-consistency constraints, retaining only
-        structurally and behaviorally valid models (§4.5).
+       Agentic pipeline for epidemic scenario modeling and ensemble simulation, where
+      natural-language scenarios are augmented with domain knowledge to drive flow-graph synthesis,
+      LLM-based simulator generation, calibration, and multi-agent verification.
+       Prompt <-> Flow Graph -> Simulator Code -> Results.
+        
       </figcaption>
     </figure>
   </div>
